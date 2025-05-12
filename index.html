@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Orion-Labor Karte</title>
-    <style>
-        body { background-color: #0a0a0a; color: #00ffcc; font-family: monospace; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Codeeingabe</title>
+  <style>
+    body { 
+      background-color: black; 
+      color: #00ffcc; 
+      font-family: monospace; 
+      text-align: center; 
+      margin-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 18px;
+      background-color: #111;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+    }
+  </style>
 </head>
 <body>
-    <h1>Willkommen im Orion-Labor</h1>
-    <p>Hier ist die Karte der Einrichtung. Suche nach dem Symbol, das dich weiterführt.</p>
-    <img src="karte.png" alt="Labor Karte" style="width:80%;">
+  <h1>🔐 Sicherheitsüberprüfung</h1>
+  <p>Bitte gib den Zugangscode ein:</p>
+  
+  <input type="text" id="codeInput" placeholder="Codewort hier...">
+  <br>
+  <button onclick="checkCode()">Überprüfen</button>
+  
+  <p id="feedback"></p>
 
-    <!-- Suche nach dem Raum mit dem Sigma-Symbol. -->
-    <!-- Zusatzeasteregg: Name des alternativen Schöpfers: Dr. Lambda -->
+  <script>
+    function checkCode() {
+      var eingabe = document.getElementById('codeInput').value.trim();
+      var korrekt = "NeonFlux";//Bro es ist nicht cool das Passwort nach zu schauen ):
+      
+      if (eingabe === korrekt) {
+        document.getElementById('feedback').innerHTML = "✅ Zugang gewährt. Weiter!";
+        document.getElementById('feedback').style.color = "#00ff00";
+        setTimeout(function() {
+          window.location.href = "geheimsignal.html";
+        }, 1500);
+      } else {
+        document.getElementById('feedback').innerHTML = "❌ Falscher Code. Versuch es erneut.";
+        document.getElementById('feedback').style.color = "#ff3333";
+      }
+    }
+  </script>
 </body>
 </html>
-
