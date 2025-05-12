@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission: NeonFlux - Einstieg</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 2em;
+    }
+    .start-button {
+      background-color: #00ffcc;
+      color: black;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .start-button:hover {
+      background-color: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Willkommen, Agent</h1>
+  <p>Deine Mission beginnt jetzt. <br>
+  Um voranzukommen, musst du die korrekten Lösungen finden und sie entweder in die Boxen eintragen oder sollten diese nicht vorhanden sein direkt in der Adressleiste deines Browsers hinter dem Slash ("/") eingeben.
+  <br><br>
+  Beispiel: <code>waytoexit.netlify.app/<strong>lösung</strong></code>
+  <br><br>
+  Jede richtige Eingabe bringt dich dem Geheimnis von <strong>NeonFlux</strong> näher.
+  Bleib wachsam. Die Hinweise sind verborgen.
+  </p>
+
+  <button class="start-button" onclick="startMission()">Starte die Mission</button>
+
+  <script>
+    function startMission() {
+      window.location.href = 'start';
+    }
+  </script>
+
+</body>
+</html>
